@@ -1,0 +1,10 @@
+// A controller called viewProject is available to the application
+// It loads a file called project.handlebars and displays it 
+
+exports.viewProject = function(req, res) {
+	var name = req.params.name;
+	console.log("The project name is: " + name); 
+	res.render('project', {
+	  'projectName': name
+	});
+};
